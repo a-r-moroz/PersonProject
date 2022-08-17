@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Current User View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="CurrentUserViewController" customModule="Person" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snj-NJ-2iP">
+                                <rect key="frame" x="16" y="64" width="41" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" name="OrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="ХХХХХХХХХ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5I-8l-QTD">
+                                <rect key="frame" x="178" y="105" width="220" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Номер телефона:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0b-gb-E50">
+                                <rect key="frame" x="16" y="105" width="146" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" name="OrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Минск" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWC-ML-aMg">
+                                <rect key="frame" x="87" y="146" width="311" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Город:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Fb-wx-5WS">
+                                <rect key="frame" x="16" y="146" width="55" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" name="OrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Name Surname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z43-4D-nor">
+                                <rect key="frame" x="73" y="64" width="325" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="snj-NJ-2iP" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="1RR-nl-cBA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="z43-4D-nor" secondAttribute="trailing" constant="16" id="3Lk-rM-jCb"/>
+                            <constraint firstItem="FWC-ML-aMg" firstAttribute="top" secondItem="n5I-8l-QTD" secondAttribute="bottom" constant="20" id="3oT-e6-RQw"/>
+                            <constraint firstItem="FWC-ML-aMg" firstAttribute="trailing" secondItem="n5I-8l-QTD" secondAttribute="trailing" id="ArQ-mc-fw9"/>
+                            <constraint firstItem="5Fb-wx-5WS" firstAttribute="top" secondItem="c0b-gb-E50" secondAttribute="bottom" constant="20" id="CVL-vt-QeC"/>
+                            <constraint firstItem="z43-4D-nor" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="DQq-EB-VDg"/>
+                            <constraint firstItem="snj-NJ-2iP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Ie0-8B-J0M"/>
+                            <constraint firstItem="n5I-8l-QTD" firstAttribute="leading" secondItem="c0b-gb-E50" secondAttribute="trailing" constant="16" id="Ihx-Mg-Pwg"/>
+                            <constraint firstItem="c0b-gb-E50" firstAttribute="top" secondItem="z43-4D-nor" secondAttribute="bottom" constant="20" id="Laz-C1-y8T"/>
+                            <constraint firstItem="n5I-8l-QTD" firstAttribute="top" secondItem="z43-4D-nor" secondAttribute="bottom" constant="20" id="SY5-cl-KMK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="z43-4D-nor" secondAttribute="trailing" constant="16" id="cJS-xZ-0tC"/>
+                            <constraint firstItem="5Fb-wx-5WS" firstAttribute="leading" secondItem="c0b-gb-E50" secondAttribute="leading" id="h40-DJ-c0e"/>
+                            <constraint firstItem="FWC-ML-aMg" firstAttribute="leading" secondItem="5Fb-wx-5WS" secondAttribute="trailing" constant="16" id="jCq-P2-zrP"/>
+                            <constraint firstItem="c0b-gb-E50" firstAttribute="leading" secondItem="snj-NJ-2iP" secondAttribute="leading" id="loB-NK-glF"/>
+                            <constraint firstItem="z43-4D-nor" firstAttribute="leading" secondItem="snj-NJ-2iP" secondAttribute="trailing" constant="16" id="vwV-4a-hlY"/>
+                            <constraint firstItem="n5I-8l-QTD" firstAttribute="trailing" secondItem="z43-4D-nor" secondAttribute="trailing" id="zsV-HM-rcd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="FWC-ML-aMg" id="FBb-5h-W7n"/>
+                        <outlet property="nameLabel" destination="z43-4D-nor" id="QRt-XI-ODJ"/>
+                        <outlet property="phoneLabel" destination="n5I-8l-QTD" id="w2P-Wm-y7g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45" y="65"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="OrangeColor">
+            <color red="1" green="0.57800000905990601" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
