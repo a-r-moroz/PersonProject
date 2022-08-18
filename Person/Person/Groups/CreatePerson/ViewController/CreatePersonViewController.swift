@@ -14,27 +14,21 @@ class CreatePersonViewController: UIViewController {
     
     // - Managers
     private var coordinator: CreatePersonScreenCoordinator!
+    private var layout: CreatePersonScreenLayoutManager!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Создать пользователя"
         configure()
+//        layout.updateUI()
 //        fetchData()
     }
+    
 }
 
 // MARK: -
 // MARK: - Action
 
 fileprivate extension CreatePersonViewController {
-    
-    private func configure() {
-        configureCoordinator()
-    }
-    
-    private func configureCoordinator() {
-        coordinator = CreatePersonScreenCoordinator(viewController: self)
-    }
     
     @IBAction private func didTapSaveButton(_ sender: UIButton) {
         
@@ -47,4 +41,17 @@ fileprivate extension CreatePersonViewController {
     @objc private func updateAfterLoginOrLogout() {
 //        fetchData()
     }
+    
+}
+
+fileprivate extension CreatePersonViewController {
+    
+    private func configure() {
+        configureCoordinator()
+    }
+    
+    private func configureCoordinator() {
+        coordinator = CreatePersonScreenCoordinator(viewController: self)
+    }
+    
 }

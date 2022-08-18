@@ -38,6 +38,7 @@ class UserTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+    
 }
 
 // MARK: -
@@ -58,6 +59,7 @@ extension UserTableViewCell {
             userNameLabel.text = nil
         }
     }
+    
 }
 
 // MARK: -
@@ -77,5 +79,5 @@ fileprivate extension UserTableViewCell {
     private func configureDataSource() {
 //        dataSource = UsersTableViewCellDataSource(collectionView: PersonTableViewCell)
     }
+    
 }
-

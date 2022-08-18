@@ -32,12 +32,12 @@ fileprivate extension Alert {
         }
     }
 
-    private var alertMessage: String {
+    private var alertMessage: String? {
         switch self {
             case .emptyUser:
                 return "Все поля должны быть заполнены."
             default:
-            return ""
+            return nil
         }
     }
 }

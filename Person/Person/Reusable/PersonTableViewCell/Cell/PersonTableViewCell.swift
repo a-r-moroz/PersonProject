@@ -31,6 +31,7 @@ class PersonTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
 }
 
 // MARK: -
@@ -50,4 +51,5 @@ fileprivate extension PersonTableViewCell {
     private func configureDataSource() {
 //        dataSource = UsersTableViewCellDataSource(collectionView: PersonTableViewCell)
     }
+    
 }

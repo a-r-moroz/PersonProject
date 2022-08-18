@@ -18,7 +18,6 @@ class UsersTableScreenCoordinator {
     }
     
     func closeCreatingUserScreen() {
-//        let creatingUserScreen = Storyboard.createUser.viewController
         vc.navigationController?.popViewController(animated: true)
     }
     
@@ -28,7 +27,7 @@ class UsersTableScreenCoordinator {
         vc.navigationController?.pushViewController(creatingUserScreen, animated: true)
     }
     
-    func showSelectedUserScreen() {
+    func showSelectedUserScreen(user: User) {
         let currentUserScreen = Storyboard.showSelectedUser.viewController
 //        vc.navigationController?.pushViewController(currentUserScreen, animated: true)
         if let sheet = currentUserScreen.sheetPresentationController {
@@ -36,7 +35,8 @@ class UsersTableScreenCoordinator {
             sheet.prefersGrabberVisible = true
             sheet.prefersEdgeAttachedInCompactHeight = true
         }
-//        (currentUserScreen as? CurrentUserViewController)?.currentUser = user
+        (currentUserScreen as? CurrentUserViewController)?.set(user: user)
         vc.present(currentUserScreen, animated: true)
     }
+    
 }

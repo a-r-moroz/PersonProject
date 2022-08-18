@@ -15,7 +15,6 @@
 		8E5CF50828AC542B000BB6EA /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5CF50628AC542B000BB6EA /* PersonTableViewCell.swift */; };
 		8E5CF50928AC542B000BB6EA /* PersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E5CF50728AC542B000BB6EA /* PersonTableViewCell.xib */; };
 		8E5CF50E28AC55B6000BB6EA /* CurrentUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E5CF50D28AC55B6000BB6EA /* CurrentUser.storyboard */; };
-		8E64A49C28AC140200552302 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E64A49B28AC140200552302 /* Main.storyboard */; };
 		8E64A4A128AC15C800552302 /* StoryboardEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64A4A028AC15C800552302 /* StoryboardEnum.swift */; };
 		8E64A4A428AC169700552302 /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64A4A328AC169700552302 /* UIStoryboardExtension.swift */; };
 		8EB14A8F28AC027000773A84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB14A8E28AC027000773A84 /* AppDelegate.swift */; };
@@ -35,6 +34,8 @@
 		8EF54ABB28AD16E1007914CF /* UsersTableScreenDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF54ABA28AD16E1007914CF /* UsersTableScreenDataSource.swift */; };
 		8EF54ABF28AD17B8007914CF /* UsersTableScreenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF54ABE28AD17B8007914CF /* UsersTableScreenDelegate.swift */; };
 		8EF54AC228AD52CE007914CF /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF54AC128AD52CE007914CF /* UserTableViewCell.swift */; };
+		8EF54AC628AD77BE007914CF /* UsersTableScreenLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF54AC528AD77BE007914CF /* UsersTableScreenLayoutManager.swift */; };
+		8EF54ACB28AD9FA2007914CF /* CreatePersonScreenLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF54ACA28AD9FA2007914CF /* CreatePersonScreenLayoutManager.swift */; };
 		AD2839B78F1784167FCA9219 /* Pods_Person.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8CF2CA2479CB3823B60110 /* Pods_Person.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +49,6 @@
 		8E5CF50628AC542B000BB6EA /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		8E5CF50728AC542B000BB6EA /* PersonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonTableViewCell.xib; sourceTree = "<group>"; };
 		8E5CF50D28AC55B6000BB6EA /* CurrentUser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CurrentUser.storyboard; sourceTree = "<group>"; };
-		8E64A49B28AC140200552302 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8E64A4A028AC15C800552302 /* StoryboardEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardEnum.swift; sourceTree = "<group>"; };
 		8E64A4A328AC169700552302 /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
 		8EB14A8B28AC027000773A84 /* Person.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Person.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +70,8 @@
 		8EF54ABA28AD16E1007914CF /* UsersTableScreenDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableScreenDataSource.swift; sourceTree = "<group>"; };
 		8EF54ABE28AD17B8007914CF /* UsersTableScreenDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableScreenDelegate.swift; sourceTree = "<group>"; };
 		8EF54AC128AD52CE007914CF /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		8EF54AC528AD77BE007914CF /* UsersTableScreenLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableScreenLayoutManager.swift; sourceTree = "<group>"; };
+		8EF54ACA28AD9FA2007914CF /* CreatePersonScreenLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePersonScreenLayoutManager.swift; sourceTree = "<group>"; };
 		BA8CF2CA2479CB3823B60110 /* Pods_Person.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Person.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEEF8E77F13668E6D51A29D0 /* Pods-Person.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Person.release.xcconfig"; path = "Target Support Files/Pods-Person/Pods-Person.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,19 +150,19 @@
 		8E5CF50A28AC5570000BB6EA /* CurrentUser */ = {
 			isa = PBXGroup;
 			children = (
-				8EF54AB628AD0B41007914CF /* Coordinator */,
-				8E5CF50B28AC5584000BB6EA /* CurrentUserViewController */,
+				8EF54AC728AD94DC007914CF /* Managers */,
+				8E5CF50B28AC5584000BB6EA /* ViewController */,
 				8E5CF50C28AC5596000BB6EA /* Storyboard */,
 			);
 			path = CurrentUser;
 			sourceTree = "<group>";
 		};
-		8E5CF50B28AC5584000BB6EA /* CurrentUserViewController */ = {
+		8E5CF50B28AC5584000BB6EA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				8EF54AAF28ACE8C2007914CF /* CurrentUserViewController.swift */,
 			);
-			path = CurrentUserViewController;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		8E5CF50C28AC5596000BB6EA /* Storyboard */ = {
@@ -227,8 +229,6 @@
 				8EB14AA228AC048500773A84 /* Groups */,
 				8E64A49D28AC159D00552302 /* Core */,
 				8EB14AA728AC04E400773A84 /* Person */,
-				8EB14A9C28AC027100773A84 /* Info.plist */,
-				8E64A49B28AC140200552302 /* Main.storyboard */,
 			);
 			path = Person;
 			sourceTree = "<group>";
@@ -246,7 +246,7 @@
 		8EB14AA328AC048C00773A84 /* CreatePerson */ = {
 			isa = PBXGroup;
 			children = (
-				8EF54AB128AD03C6007914CF /* Coordinator */,
+				8EF54AC828AD94F7007914CF /* Managers */,
 				8EB14AA828AC081A00773A84 /* ViewController */,
 				8EB14AA428AC04A000773A84 /* Storyboard */,
 			);
@@ -264,9 +264,10 @@
 		8EB14AA728AC04E400773A84 /* Person */ = {
 			isa = PBXGroup;
 			children = (
+				8EB14A9C28AC027100773A84 /* Info.plist */,
+				8EB14A9728AC027100773A84 /* Assets.xcassets */,
 				8EB14A8E28AC027000773A84 /* AppDelegate.swift */,
 				8EB14A9928AC027100773A84 /* LaunchScreen.storyboard */,
-				8EB14A9728AC027100773A84 /* Assets.xcassets */,
 			);
 			path = Person;
 			sourceTree = "<group>";
@@ -282,11 +283,11 @@
 		8EB14AAB28AC09BA00773A84 /* UsersTable */ = {
 			isa = PBXGroup;
 			children = (
-				8EF54AC028AD52C5007914CF /* Cell */,
 				8EF54ABC28AD178F007914CF /* Protocol */,
+				8EF54AC028AD52C5007914CF /* Cell */,
 				8EF54AB928AD16BA007914CF /* DataSource */,
-				8EF54AAC28ACE13F007914CF /* Coordinator */,
-				8EB14AB128AC0A0000773A84 /* UsersTableViewController */,
+				8EF54AC328AD7794007914CF /* Managers */,
+				8EB14AB128AC0A0000773A84 /* ViewController */,
 				8EB14AAC28AC09CB00773A84 /* Storyboard */,
 			);
 			path = UsersTable;
@@ -300,12 +301,12 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
-		8EB14AB128AC0A0000773A84 /* UsersTableViewController */ = {
+		8EB14AB128AC0A0000773A84 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				8EB14AB228AC0A0D00773A84 /* UsersTableViewController.swift */,
 			);
-			path = UsersTableViewController;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		8EF54AA628ACDBDB007914CF /* DataSource */ = {
@@ -372,13 +373,54 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		8EF54AC328AD7794007914CF /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				8EF54AAC28ACE13F007914CF /* Coordinator */,
+				8EF54AC428AD779D007914CF /* Layout */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		8EF54AC428AD779D007914CF /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				8EF54AC528AD77BE007914CF /* UsersTableScreenLayoutManager.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		8EF54AC728AD94DC007914CF /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				8EF54AB628AD0B41007914CF /* Coordinator */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		8EF54AC828AD94F7007914CF /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				8EF54AB128AD03C6007914CF /* Coordinator */,
+				8EF54AC928AD9F74007914CF /* Layout */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		8EF54AC928AD9F74007914CF /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				8EF54ACA28AD9FA2007914CF /* CreatePersonScreenLayoutManager.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
 		DE01125C8048C9B936A910E8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				63EB1D74E781D3EF8D8D3DBB /* Pods-Person.debug.xcconfig */,
 				CEEF8E77F13668E6D51A29D0 /* Pods-Person.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -451,7 +493,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EB14AAE28AC09EB00773A84 /* UsersTable.storyboard in Resources */,
-				8E64A49C28AC140200552302 /* Main.storyboard in Resources */,
 				8E5CF50928AC542B000BB6EA /* PersonTableViewCell.xib in Resources */,
 				8EB14A9B28AC027100773A84 /* LaunchScreen.storyboard in Resources */,
 				8E5CF50E28AC55B6000BB6EA /* CurrentUser.storyboard in Resources */,
@@ -509,6 +550,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EF54ACB28AD9FA2007914CF /* CreatePersonScreenLayoutManager.swift in Sources */,
 				8EB14A8F28AC027000773A84 /* AppDelegate.swift in Sources */,
 				8EF54AA828ACDBF4007914CF /* UsersTableViewCellDataSource.swift in Sources */,
 				8EF54ABF28AD17B8007914CF /* UsersTableScreenDelegate.swift in Sources */,
@@ -530,6 +572,7 @@
 				8EF54AB828AD0B6F007914CF /* CurrentUserScreenCoordinator.swift in Sources */,
 				8EF54AB528AD0718007914CF /* UINavigationController.swift in Sources */,
 				8E5CF4F728AC4BAF000BB6EA /* AppColor.swift in Sources */,
+				8EF54AC628AD77BE007914CF /* UsersTableScreenLayoutManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,10 +714,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8HDA39CT36;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Person/Info.plist;
+				INFOPLIST_FILE = Person/Person/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = UsersTable;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -700,10 +743,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8HDA39CT36;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Person/Info.plist;
+				INFOPLIST_FILE = Person/Person/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = UsersTable;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

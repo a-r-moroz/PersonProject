@@ -8,9 +8,6 @@
 import UIKit
 
 protocol UsersTableScreenDelegate: AnyObject {
-//    func didTapCancelOrderButton(orderId: ID<OrderModel>)
-//    func didTapRepeatOrderButton(orderId: ID<OrderModel>)
+//    var users: [User] { get }
     func didSelectOrderedItemCell(userModel: User)
-//    func didTapWriteReviewButton(goodsModel: GoodsModel)
-//    func didTapAddItemToCartButton(goodsModel: GoodsModel)
 }

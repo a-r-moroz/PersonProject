@@ -9,6 +9,7 @@ import UIKit
 
 class UsersTableViewController: UIViewController {
     
+    // - UI
     @IBOutlet weak var tableView: UITableView!
     
     // - DataSource
@@ -16,29 +17,34 @@ class UsersTableViewController: UIViewController {
     
     // - Managers
     private var coordinator: UsersTableScreenCoordinator!
+    private var layout: UsersTableScreenLayoutManager!
     
     // - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
+//        layout.updateUI()
         title = "Список пользователей"
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Назад", style: .plain, target: nil, action: nil)
-        self.navigationController?.navigationBar.tintColor = AppColor.orangeColor
+        navigationController?.navigationBar.tintColor = AppColor.orangeColor
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 //        getUsers()
     }
+    
 }
 
 // MARK: -
 // MARK: - Action
+
 fileprivate extension UsersTableViewController {
 
     @IBAction func createUser(_ sender: UIButton) {
         coordinator.openCreatingUserScreen()
     }
+    
 }
 
 // MARK: -
@@ -46,8 +52,9 @@ fileprivate extension UsersTableViewController {
 extension UsersTableViewController: UsersTableScreenDelegate {
     
     func didSelectOrderedItemCell(userModel: User) {
-        coordinator.showSelectedUserScreen()
+        coordinator.showSelectedUserScreen(user: userModel)
     }
+    
 }
 
 fileprivate extension UsersTableViewController {
@@ -64,4 +71,5 @@ fileprivate extension UsersTableViewController {
     private func configureCoordinator() {
         coordinator = UsersTableScreenCoordinator(viewController: self)
     }
+    
 }

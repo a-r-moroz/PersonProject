@@ -19,4 +19,16 @@ class CurrentUserViewController: UIViewController {
         super.viewDidLoad()
 //        configure()
     }
+    
+}
+
+// MARK: -
+// MARK: - Set
+
+extension CurrentUserViewController {
+    
+    func set(user: User) {
+        self.currentUser = user
+    }
+
 }

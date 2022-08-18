@@ -31,12 +31,10 @@ final class UsersTableScreenDataSource: NSObject {
 // MARK: -
 // MARK: - DataSource
 
-// swiftlint:disable line_length
-
 extension UsersTableScreenDataSource: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return models.count
+        return cells.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -66,16 +64,18 @@ extension UsersTableScreenDataSource: UITableViewDelegate {
 
 fileprivate extension UsersTableScreenDataSource {
     
-    private enum Cell: String {
-        case personCell = "BankDetailsTextFieldCell"
-        
+    private enum Cell {
+//        private enum Cell: String {
+//        case personCell = "userTableViewCell"
+        case personCell(user: User)
         var id: String {
             switch self {
                 case .personCell:
-                    return "orderedItemCell"
+                    return "userTableViewCell"
             }
         }
     }
+    
 }
 
 // MARK: -
@@ -86,11 +86,23 @@ fileprivate extension UsersTableScreenDataSource {
     private func configure() {
         configureTableView()
     }
+    
+    private func configureCells() {
+        cells.removeAll()
+        models.forEach { user in
+            cells.append(.personCell(user: user))
+        }
+        tableView.reloadData()
+    }
 
     private func configureTableView() {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.delaysContentTouches = false
-//        tableView.contentInset = UIEdgeInsets(top: 16, left: 0, bottom: 16, right: 0)
     }
+    
+    private func registerCells() {
+        tableView.register(UINib(nibName: String(describing: UserTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: UserTableViewCell.self))
+    }
+    
 }

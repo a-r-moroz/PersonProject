@@ -8,6 +8,7 @@
 import UIKit
 
 class CreatePersonScreenCoordinator {
+    
     // - VC
     private unowned let vc: CreatePersonViewController
     
@@ -20,4 +21,5 @@ class CreatePersonScreenCoordinator {
         let creatingUserScreen = Storyboard.users.viewController
         vc.navigationController?.popViewController(animated: true)
     }
+    
 }
