@@ -36,6 +36,7 @@
 		8EF54AC228AD52CE007914CF /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF54AC128AD52CE007914CF /* UserTableViewCell.swift */; };
 		8EF54AC628AD77BE007914CF /* UsersTableScreenLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF54AC528AD77BE007914CF /* UsersTableScreenLayoutManager.swift */; };
 		8EF54ACB28AD9FA2007914CF /* CreatePersonScreenLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF54ACA28AD9FA2007914CF /* CreatePersonScreenLayoutManager.swift */; };
+		8EF54ACE28AE3B06007914CF /* CreatePersonScreenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF54ACD28AE3B06007914CF /* CreatePersonScreenDelegate.swift */; };
 		AD2839B78F1784167FCA9219 /* Pods_Person.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8CF2CA2479CB3823B60110 /* Pods_Person.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,7 @@
 		8EF54AC128AD52CE007914CF /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		8EF54AC528AD77BE007914CF /* UsersTableScreenLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableScreenLayoutManager.swift; sourceTree = "<group>"; };
 		8EF54ACA28AD9FA2007914CF /* CreatePersonScreenLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePersonScreenLayoutManager.swift; sourceTree = "<group>"; };
+		8EF54ACD28AE3B06007914CF /* CreatePersonScreenDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePersonScreenDelegate.swift; sourceTree = "<group>"; };
 		BA8CF2CA2479CB3823B60110 /* Pods_Person.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Person.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEEF8E77F13668E6D51A29D0 /* Pods-Person.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Person.release.xcconfig"; path = "Target Support Files/Pods-Person/Pods-Person.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -246,6 +248,7 @@
 		8EB14AA328AC048C00773A84 /* CreatePerson */ = {
 			isa = PBXGroup;
 			children = (
+				8EF54ACC28AE3AEA007914CF /* Protocol */,
 				8EF54AC828AD94F7007914CF /* Managers */,
 				8EB14AA828AC081A00773A84 /* ViewController */,
 				8EB14AA428AC04A000773A84 /* Storyboard */,
@@ -415,6 +418,14 @@
 			path = Layout;
 			sourceTree = "<group>";
 		};
+		8EF54ACC28AE3AEA007914CF /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				8EF54ACD28AE3B06007914CF /* CreatePersonScreenDelegate.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		DE01125C8048C9B936A910E8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -560,6 +571,7 @@
 				8EB14AAA28AC084000773A84 /* CreatePersonViewController.swift in Sources */,
 				8EF54AB328AD03E8007914CF /* CreatePersonScreenCoordinator.swift in Sources */,
 				8E64A4A128AC15C800552302 /* StoryboardEnum.swift in Sources */,
+				8EF54ACE28AE3B06007914CF /* CreatePersonScreenDelegate.swift in Sources */,
 				8EF54AAE28ACE160007914CF /* UsersTableScreenCoordinator.swift in Sources */,
 				8E5CF50828AC542B000BB6EA /* PersonTableViewCell.swift in Sources */,
 				8E5CF4F928AC4D84000BB6EA /* AlertEnum.swift in Sources */,

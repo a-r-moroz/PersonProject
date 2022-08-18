@@ -18,7 +18,6 @@ class CreatePersonScreenCoordinator {
     }
     
     func closeCreatingUserScreen() {
-        let creatingUserScreen = Storyboard.users.viewController
         vc.navigationController?.popViewController(animated: true)
     }
     

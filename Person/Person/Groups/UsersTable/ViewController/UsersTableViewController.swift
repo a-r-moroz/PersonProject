@@ -50,6 +50,9 @@ fileprivate extension UsersTableViewController {
 // MARK: -
 // MARK: - Delegate
 extension UsersTableViewController: UsersTableScreenDelegate {
+    func saveNewUser(newUser: User) {
+        PersonRealmManager.add(object: newUser)
+    }
     
     func didSelectOrderedItemCell(userModel: User) {
         coordinator.showSelectedUserScreen(user: userModel)

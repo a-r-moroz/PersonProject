@@ -123,6 +123,12 @@
                             <constraint firstItem="zL1-GI-6wZ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="ySv-xX-6tk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityField" destination="64p-Y5-lSg" id="aWC-7m-b0M"/>
+                        <outlet property="nameField" destination="BKc-mZ-trr" id="yeE-EE-5Jb"/>
+                        <outlet property="phoneField" destination="g1P-PO-o3d" id="4B5-tM-ujg"/>
+                        <outlet property="surnameField" destination="xuI-if-ATP" id="wAE-kG-7w0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

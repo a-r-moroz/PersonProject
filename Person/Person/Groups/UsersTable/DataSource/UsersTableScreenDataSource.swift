@@ -16,7 +16,7 @@ final class UsersTableScreenDataSource: NSObject {
     private unowned let tableView: UITableView
     
     // - Data
-    private var models: [User] = []
+    private var models = PersonRealmManager.read(type: User.self)
     private var cells: [Cell] = []
     
     // - Init
@@ -26,6 +26,7 @@ final class UsersTableScreenDataSource: NSObject {
         super.init()
         configure()
     }
+    
 }
 
 // MARK: -
@@ -42,9 +43,8 @@ extension UsersTableScreenDataSource: UITableViewDataSource {
         (cell as? UserTableViewCell)?.set(model: models[indexPath.item], delegate)
         return cell
     }
+    
 }
-
-// swiftlint:enable line_length
 
 // MARK: -
 // MARK: - UITableViewDelegate
@@ -84,7 +84,9 @@ fileprivate extension UsersTableScreenDataSource {
 fileprivate extension UsersTableScreenDataSource {
     
     private func configure() {
+        registerCells()
         configureTableView()
+        configureCells()
     }
     
     private func configureCells() {
