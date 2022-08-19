@@ -26,9 +26,6 @@ class UsersTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
-        layout.updateUI()
-        let phonesButton = UIBarButtonItem(image: UIImage(systemName: "phone.fill"), style: .plain, target: self, action: #selector(showPhonesButton(sender:)))
-        navigationItem.rightBarButtonItem = phonesButton
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -45,6 +42,10 @@ fileprivate extension UsersTableViewController {
 
     @IBAction func createUser(_ sender: UIButton) {
         coordinator.openCreatingUserScreen()
+    }
+    
+    @objc func showPhonesButton(sender: UIBarButtonItem) {
+        coordinator.showPhonesScreen()
     }
     
 }
@@ -78,15 +79,17 @@ fileprivate extension UsersTableViewController {
     
     private func configureLayoutManager() {
         layout = UsersTableScreenLayoutManager(viewController: self)
+        layout.updateUI()
+    }
+    
+    private func configureBarButtonItem() {
+        let phonesButton = UIBarButtonItem(image: UIImage(systemName: "phone.fill"), style: .plain, target: self, action: #selector(showPhonesButton(sender:)))
+            navigationItem.rightBarButtonItem = phonesButton
     }
     
     private func getUsers() {
         users = PersonRealmManager.read(type: User.self)
         dataSource.update(models: users)
-    }
-    
-    @objc func showPhonesButton(sender: UIBarButtonItem) {
-        coordinator.showPhonesScreen()
     }
     
 }
