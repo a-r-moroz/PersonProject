@@ -10,6 +10,7 @@ import UIKit
 enum AppColor {
     
     // MARK: - Colors
+    
     static let orangeColor = UIColor(named: "OrangeColor")!
     static let backgroundColor = UIColor(named: "BackgroundColor")!
     static let secondBackgroundColor = UIColor(named: "SecondBackgroundColor")!

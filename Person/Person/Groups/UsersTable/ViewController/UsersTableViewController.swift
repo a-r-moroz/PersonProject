@@ -8,13 +8,16 @@
 import UIKit
 
 class UsersTableViewController: UIViewController {
-    
+        
     // - UI
     @IBOutlet weak var tableView: UITableView!
     
     // - DataSource
     private var dataSource: UsersTableScreenDataSource!
-    
+
+    // - Data
+    private var users: [User] = []
+
     // - Managers
     private var coordinator: UsersTableScreenCoordinator!
     private var layout: UsersTableScreenLayoutManager!
@@ -23,15 +26,14 @@ class UsersTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
-//        layout.updateUI()
-        title = "Список пользователей"
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Назад", style: .plain, target: nil, action: nil)
-        navigationController?.navigationBar.tintColor = AppColor.orangeColor
+        layout.updateUI()
+        let phonesButton = UIBarButtonItem(image: UIImage(systemName: "phone.fill"), style: .plain, target: self, action: #selector(showPhonesButton(sender:)))
+        navigationItem.rightBarButtonItem = phonesButton
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        getUsers()
+        getUsers()
     }
     
 }
@@ -49,10 +51,8 @@ fileprivate extension UsersTableViewController {
 
 // MARK: -
 // MARK: - Delegate
+
 extension UsersTableViewController: UsersTableScreenDelegate {
-    func saveNewUser(newUser: User) {
-        PersonRealmManager.add(object: newUser)
-    }
     
     func didSelectOrderedItemCell(userModel: User) {
         coordinator.showSelectedUserScreen(user: userModel)
@@ -65,6 +65,7 @@ fileprivate extension UsersTableViewController {
     private func configure() {
         configureDataSource()
         configureCoordinator()
+        configureLayoutManager()
     }
     
     private func configureDataSource() {
@@ -73,6 +74,19 @@ fileprivate extension UsersTableViewController {
     
     private func configureCoordinator() {
         coordinator = UsersTableScreenCoordinator(viewController: self)
+    }
+    
+    private func configureLayoutManager() {
+        layout = UsersTableScreenLayoutManager(viewController: self)
+    }
+    
+    private func getUsers() {
+        users = PersonRealmManager.read(type: User.self)
+        dataSource.update(models: users)
+    }
+    
+    @objc func showPhonesButton(sender: UIBarButtonItem) {
+        coordinator.showPhonesScreen()
     }
     
 }

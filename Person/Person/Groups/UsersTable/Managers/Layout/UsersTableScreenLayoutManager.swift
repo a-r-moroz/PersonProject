@@ -11,7 +11,7 @@ class UsersTableScreenLayoutManager: NSObject {
     
     // - VC
     private unowned let vc: UsersTableViewController
-    
+        
     // - Init
     init(viewController: UsersTableViewController) {
         self.vc = viewController

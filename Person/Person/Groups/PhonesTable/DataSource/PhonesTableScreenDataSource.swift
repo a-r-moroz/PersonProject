@@ -1,16 +1,16 @@
 //
-//  UsersTableScreenDataSource.swift
+//  PhonesTableScreenDataSource.swift
 //  Person
 //
-//  Created by Andrew Moroz on 17.08.22.
+//  Created by Andrew Moroz on 19.08.22.
 //
 
 import UIKit
 
-final class UsersTableScreenDataSource: NSObject {
+class PhonesTableScreenDataSource: NSObject {
     
     // - Delegate
-    private weak var delegate: UsersTableScreenDelegate?
+    private weak var delegate: PhonesTableScreenDelegate?
     
     // - UI
     private unowned let tableView: UITableView
@@ -20,7 +20,7 @@ final class UsersTableScreenDataSource: NSObject {
     private var cells: [Cell] = []
     
     // - Init
-    init(tableView: UITableView, delegate: UsersTableScreenDelegate) {
+    init(tableView: UITableView, delegate: PhonesTableScreenDelegate) {
         self.tableView = tableView
         self.delegate = delegate
         super.init()
@@ -32,9 +32,9 @@ final class UsersTableScreenDataSource: NSObject {
 // MARK: -
 // MARK: - Update
 
-extension UsersTableScreenDataSource {
-
-    func update(models: [User]) {
+extension PhonesTableScreenDataSource {
+    
+    func updateM(models: [User]) {
         self.models = models
         configureCells()
     }
@@ -44,7 +44,7 @@ extension UsersTableScreenDataSource {
 // MARK: -
 // MARK: - DataSource
 
-extension UsersTableScreenDataSource: UITableViewDataSource {
+extension PhonesTableScreenDataSource: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cells.count
@@ -53,8 +53,8 @@ extension UsersTableScreenDataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellModel = cells[indexPath.item]
         let cell = tableView.dequeueReusableCell(withIdentifier: cellModel.id, for: indexPath)
-        if case .personCell(let user) = cellModel {
-            (cell as? UserTableViewCell)?.set(model: user, delegate)
+        if case .phoneCell(let user) = cellModel {
+            (cell as? PhoneTableViewCell)?.set(model: user, delegate)
         }
         return cell
     }
@@ -64,11 +64,11 @@ extension UsersTableScreenDataSource: UITableViewDataSource {
 // MARK: -
 // MARK: - UITableViewDelegate
 
-extension UsersTableScreenDataSource: UITableViewDelegate {
+extension PhonesTableScreenDataSource: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if models.indices.contains(indexPath.item) {
-            delegate?.didSelectOrderedItemCell(userModel: models[indexPath.item])
+            delegate?.showUserBySelectedPhone(user: models[indexPath.item])
         }
     }
     
@@ -77,16 +77,14 @@ extension UsersTableScreenDataSource: UITableViewDelegate {
 // MARK: -
 // MARK: - Cell
 
-fileprivate extension UsersTableScreenDataSource {
+fileprivate extension PhonesTableScreenDataSource {
     
     private enum Cell {
-//        private enum Cell: String {
-//        case personCell = "userTableViewCell"
-        case personCell(user: User)
+        case phoneCell(user: User)
         var id: String {
             switch self {
-                case .personCell:
-                    return "userTableViewCell"
+            case .phoneCell:
+                return "phoneTableViewCell"
             }
         }
     }
@@ -96,7 +94,7 @@ fileprivate extension UsersTableScreenDataSource {
 // MARK: -
 // MARK: - Configure
 
-fileprivate extension UsersTableScreenDataSource {
+fileprivate extension PhonesTableScreenDataSource {
     
     private func configure() {
         registerCells()
@@ -107,11 +105,11 @@ fileprivate extension UsersTableScreenDataSource {
     private func configureCells() {
         cells.removeAll()
         models.forEach { user in
-            cells.append(.personCell(user: user))
+            cells.append(.phoneCell(user: user))
         }
         tableView.reloadData()
     }
-
+    
     private func configureTableView() {
         tableView.dataSource = self
         tableView.delegate = self
@@ -119,7 +117,7 @@ fileprivate extension UsersTableScreenDataSource {
     }
     
     private func registerCells() {
-        tableView.register(UINib(nibName: String(describing: UserTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: UserTableViewCell.self))
+        tableView.register(UINib(nibName: String(describing: PhoneTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: PhoneTableViewCell.self))
     }
     
 }

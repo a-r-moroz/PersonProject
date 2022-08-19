@@ -5,10 +5,8 @@
 //  Created by Andrew Moroz on 17.08.22.
 //
 
-import UIKit
+import Foundation
 
 protocol UsersTableScreenDelegate: AnyObject {
-//    var users: [User] { get }
     func didSelectOrderedItemCell(userModel: User)
-    func saveNewUser(newUser: User)
 }

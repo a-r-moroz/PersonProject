@@ -29,7 +29,6 @@
 		8EF54AAE28ACE160007914CF /* UsersTableScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF54AAD28ACE160007914CF /* UsersTableScreenCoordinator.swift */; };
 		8EF54AB028ACE8C2007914CF /* CurrentUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF54AAF28ACE8C2007914CF /* CurrentUserViewController.swift */; };
 		8EF54AB328AD03E8007914CF /* CreatePersonScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF54AB228AD03E8007914CF /* CreatePersonScreenCoordinator.swift */; };
-		8EF54AB528AD0718007914CF /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF54AB428AD0718007914CF /* UINavigationController.swift */; };
 		8EF54AB828AD0B6F007914CF /* CurrentUserScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF54AB728AD0B6F007914CF /* CurrentUserScreenCoordinator.swift */; };
 		8EF54ABB28AD16E1007914CF /* UsersTableScreenDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF54ABA28AD16E1007914CF /* UsersTableScreenDataSource.swift */; };
 		8EF54ABF28AD17B8007914CF /* UsersTableScreenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF54ABE28AD17B8007914CF /* UsersTableScreenDelegate.swift */; };
@@ -37,6 +36,13 @@
 		8EF54AC628AD77BE007914CF /* UsersTableScreenLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF54AC528AD77BE007914CF /* UsersTableScreenLayoutManager.swift */; };
 		8EF54ACB28AD9FA2007914CF /* CreatePersonScreenLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF54ACA28AD9FA2007914CF /* CreatePersonScreenLayoutManager.swift */; };
 		8EF54ACE28AE3B06007914CF /* CreatePersonScreenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF54ACD28AE3B06007914CF /* CreatePersonScreenDelegate.swift */; };
+		8EF54AD928AEEBFF007914CF /* PhonesTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EF54AD828AEEBFF007914CF /* PhonesTable.storyboard */; };
+		8EF54ADB28AEEC4B007914CF /* PhonesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF54ADA28AEEC4B007914CF /* PhonesTableViewController.swift */; };
+		8EF54ADD28AEECFD007914CF /* PhonesTableScreenDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF54ADC28AEECFD007914CF /* PhonesTableScreenDataSource.swift */; };
+		8EF54ADF28AEEDA5007914CF /* PhonesTableScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF54ADE28AEEDA5007914CF /* PhonesTableScreenCoordinator.swift */; };
+		8EF54AE128AEEDE1007914CF /* PhonesTableScreenLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF54AE028AEEDE1007914CF /* PhonesTableScreenLayoutManager.swift */; };
+		8EF54AE328AEEE5B007914CF /* PhoneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF54AE228AEEE5B007914CF /* PhoneTableViewCell.swift */; };
+		8EF54AE528AFC301007914CF /* PhonesTableScreenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF54AE428AFC301007914CF /* PhonesTableScreenDelegate.swift */; };
 		AD2839B78F1784167FCA9219 /* Pods_Person.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8CF2CA2479CB3823B60110 /* Pods_Person.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,7 +72,6 @@
 		8EF54AAD28ACE160007914CF /* UsersTableScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableScreenCoordinator.swift; sourceTree = "<group>"; };
 		8EF54AAF28ACE8C2007914CF /* CurrentUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserViewController.swift; sourceTree = "<group>"; };
 		8EF54AB228AD03E8007914CF /* CreatePersonScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePersonScreenCoordinator.swift; sourceTree = "<group>"; };
-		8EF54AB428AD0718007914CF /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 		8EF54AB728AD0B6F007914CF /* CurrentUserScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserScreenCoordinator.swift; sourceTree = "<group>"; };
 		8EF54ABA28AD16E1007914CF /* UsersTableScreenDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableScreenDataSource.swift; sourceTree = "<group>"; };
 		8EF54ABE28AD17B8007914CF /* UsersTableScreenDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableScreenDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +79,13 @@
 		8EF54AC528AD77BE007914CF /* UsersTableScreenLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableScreenLayoutManager.swift; sourceTree = "<group>"; };
 		8EF54ACA28AD9FA2007914CF /* CreatePersonScreenLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePersonScreenLayoutManager.swift; sourceTree = "<group>"; };
 		8EF54ACD28AE3B06007914CF /* CreatePersonScreenDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePersonScreenDelegate.swift; sourceTree = "<group>"; };
+		8EF54AD828AEEBFF007914CF /* PhonesTable.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhonesTable.storyboard; sourceTree = "<group>"; };
+		8EF54ADA28AEEC4B007914CF /* PhonesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhonesTableViewController.swift; sourceTree = "<group>"; };
+		8EF54ADC28AEECFD007914CF /* PhonesTableScreenDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhonesTableScreenDataSource.swift; sourceTree = "<group>"; };
+		8EF54ADE28AEEDA5007914CF /* PhonesTableScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhonesTableScreenCoordinator.swift; sourceTree = "<group>"; };
+		8EF54AE028AEEDE1007914CF /* PhonesTableScreenLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhonesTableScreenLayoutManager.swift; sourceTree = "<group>"; };
+		8EF54AE228AEEE5B007914CF /* PhoneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTableViewCell.swift; sourceTree = "<group>"; };
+		8EF54AE428AFC301007914CF /* PhonesTableScreenDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhonesTableScreenDelegate.swift; sourceTree = "<group>"; };
 		BA8CF2CA2479CB3823B60110 /* Pods_Person.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Person.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEEF8E77F13668E6D51A29D0 /* Pods-Person.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Person.release.xcconfig"; path = "Target Support Files/Pods-Person/Pods-Person.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -201,7 +213,6 @@
 			children = (
 				8E64A4A328AC169700552302 /* UIStoryboardExtension.swift */,
 				8E5CF4FA28AC4FBF000BB6EA /* UIViewControllerExtension.swift */,
-				8EF54AB428AD0718007914CF /* UINavigationController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -238,6 +249,7 @@
 		8EB14AA228AC048500773A84 /* Groups */ = {
 			isa = PBXGroup;
 			children = (
+				8EF54ACF28AEE85D007914CF /* PhonesTable */,
 				8E5CF50A28AC5570000BB6EA /* CurrentUser */,
 				8EB14AAB28AC09BA00773A84 /* UsersTable */,
 				8EB14AA328AC048C00773A84 /* CreatePerson */,
@@ -426,6 +438,84 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		8EF54ACF28AEE85D007914CF /* PhonesTable */ = {
+			isa = PBXGroup;
+			children = (
+				8EF54AD228AEE87B007914CF /* Protocol */,
+				8EF54AD328AEE885007914CF /* Cell */,
+				8EF54AD428AEE888007914CF /* DataSource */,
+				8EF54AD528AEE891007914CF /* Managers */,
+				8EF54AD028AEE86D007914CF /* ViewController */,
+				8EF54AD128AEE873007914CF /* Storyboard */,
+			);
+			path = PhonesTable;
+			sourceTree = "<group>";
+		};
+		8EF54AD028AEE86D007914CF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8EF54ADA28AEEC4B007914CF /* PhonesTableViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8EF54AD128AEE873007914CF /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				8EF54AD828AEEBFF007914CF /* PhonesTable.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		8EF54AD228AEE87B007914CF /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				8EF54AE428AFC301007914CF /* PhonesTableScreenDelegate.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		8EF54AD328AEE885007914CF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8EF54AE228AEEE5B007914CF /* PhoneTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		8EF54AD428AEE888007914CF /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				8EF54ADC28AEECFD007914CF /* PhonesTableScreenDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		8EF54AD528AEE891007914CF /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				8EF54AD728AEE8A0007914CF /* Coordinator */,
+				8EF54AD628AEE89D007914CF /* Layout */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		8EF54AD628AEE89D007914CF /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				8EF54AE028AEEDE1007914CF /* PhonesTableScreenLayoutManager.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		8EF54AD728AEE8A0007914CF /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				8EF54ADE28AEEDA5007914CF /* PhonesTableScreenCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		DE01125C8048C9B936A910E8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -509,6 +599,7 @@
 				8E5CF50E28AC55B6000BB6EA /* CurrentUser.storyboard in Resources */,
 				8EB14AA628AC04D900773A84 /* CreatePerson.storyboard in Resources */,
 				8EB14A9828AC027100773A84 /* Assets.xcassets in Resources */,
+				8EF54AD928AEEBFF007914CF /* PhonesTable.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,17 +663,22 @@
 				8EF54AB328AD03E8007914CF /* CreatePersonScreenCoordinator.swift in Sources */,
 				8E64A4A128AC15C800552302 /* StoryboardEnum.swift in Sources */,
 				8EF54ACE28AE3B06007914CF /* CreatePersonScreenDelegate.swift in Sources */,
+				8EF54ADF28AEEDA5007914CF /* PhonesTableScreenCoordinator.swift in Sources */,
 				8EF54AAE28ACE160007914CF /* UsersTableScreenCoordinator.swift in Sources */,
+				8EF54ADD28AEECFD007914CF /* PhonesTableScreenDataSource.swift in Sources */,
+				8EF54AE328AEEE5B007914CF /* PhoneTableViewCell.swift in Sources */,
 				8E5CF50828AC542B000BB6EA /* PersonTableViewCell.swift in Sources */,
 				8E5CF4F928AC4D84000BB6EA /* AlertEnum.swift in Sources */,
 				8E5CF4FB28AC4FBF000BB6EA /* UIViewControllerExtension.swift in Sources */,
 				8EB14AB328AC0A0D00773A84 /* UsersTableViewController.swift in Sources */,
 				8EF54AB028ACE8C2007914CF /* CurrentUserViewController.swift in Sources */,
+				8EF54AE528AFC301007914CF /* PhonesTableScreenDelegate.swift in Sources */,
 				8E64A4A428AC169700552302 /* UIStoryboardExtension.swift in Sources */,
 				8EF54AC228AD52CE007914CF /* UserTableViewCell.swift in Sources */,
 				8E5CF50128AC5127000BB6EA /* User.swift in Sources */,
 				8EF54AB828AD0B6F007914CF /* CurrentUserScreenCoordinator.swift in Sources */,
-				8EF54AB528AD0718007914CF /* UINavigationController.swift in Sources */,
+				8EF54ADB28AEEC4B007914CF /* PhonesTableViewController.swift in Sources */,
+				8EF54AE128AEEDE1007914CF /* PhonesTableScreenLayoutManager.swift in Sources */,
 				8E5CF4F728AC4BAF000BB6EA /* AppColor.swift in Sources */,
 				8EF54AC628AD77BE007914CF /* UsersTableScreenLayoutManager.swift in Sources */,
 			);

@@ -12,6 +12,7 @@ enum Storyboard: String {
     case users = "UsersTable"
     case createUser = "CreatePerson"
     case showSelectedUser = "CurrentUser"
+    case phonesScreen = "PhonesTable"
 }
 
 extension Storyboard {

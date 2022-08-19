@@ -10,10 +10,10 @@ import Foundation
 class CreatePersonScreenLayoutManager: NSObject {
     
     // - VC
-    private unowned let vc: UsersTableViewController
+    private unowned let vc: CreatePersonViewController
     
     // - Init
-    init(viewController: UsersTableViewController) {
+    init(viewController: CreatePersonViewController) {
         self.vc = viewController
         super.init()
     }

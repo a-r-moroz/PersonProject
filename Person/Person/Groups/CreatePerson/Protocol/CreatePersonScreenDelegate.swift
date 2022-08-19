@@ -8,6 +8,5 @@
 import Foundation
 
 protocol CreatePersonScreenDelegate: AnyObject {
-//    var users: [User] { get }
     func saveNewUser(newUser: User)
 }

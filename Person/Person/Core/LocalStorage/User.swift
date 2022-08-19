@@ -8,10 +8,10 @@
 import RealmSwift
 
 class User: Object {
-    @Persisted var name: String = ""
-    @Persisted var phone: String = ""
-    @Persisted var surname: String = ""
-    @Persisted var city: String = ""
+    @objc dynamic var name: String = ""
+    @objc dynamic var phone: String = ""
+    @objc dynamic var surname: String = ""
+    @objc dynamic var city: String = ""
 
     convenience init(name: String, surname: String, phone: String, city: String) {
         self.init()
@@ -24,3 +24,4 @@ class User: Object {
 
 //class User {
 //@objc dynamic
+//@Persisted

@@ -15,6 +15,7 @@ enum Alert: String {
     var controller: UIAlertController {
         return UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
     }
+    
 }
 
 // MARK: -
@@ -40,4 +41,5 @@ fileprivate extension Alert {
             return nil
         }
     }
+    
 }

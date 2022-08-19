@@ -1,22 +1,22 @@
 //
-//  UserTableViewCell.swift
+//  PhoneTableViewCell.swift
 //  Person
 //
-//  Created by Andrew Moroz on 17.08.22.
+//  Created by Andrew Moroz on 19.08.22.
 //
 
 import UIKit
 
-class UserTableViewCell: UITableViewCell {
-
+class PhoneTableViewCell: UITableViewCell {
+    
     // - Delegate
-    private weak var delegate: UsersTableScreenDelegate?
+    private weak var delegate: PhonesTableScreenDelegate?
     
     // - UI
     @IBOutlet weak var userNameLabel: UILabel!
-    @IBOutlet weak var userImageView: UIImageView!
+    @IBOutlet weak var userPhoneLabel: UILabel!
     
-    // - Data
+    // - DataSource
     private var model: User?
     
     // - Lifecycle
@@ -43,17 +43,18 @@ class UserTableViewCell: UITableViewCell {
 // MARK: -
 // MARK: - Set
 
-extension UserTableViewCell {
+extension PhoneTableViewCell {
 
-    func set(model: User, _ delegate: UsersTableScreenDelegate?) {
+    func set(model: User, _ delegate: PhonesTableScreenDelegate?) {
         self.model = model
         self.delegate = delegate
-        setUserNameLabel()
+        setUserNamAndPhone()
     }
 
-    private func setUserNameLabel() {
-        if let userName = model?.name, let userSurname = model?.surname {
+    private func setUserNamAndPhone() {
+        if let userName = model?.name, let userSurname = model?.surname, let phone = model?.phone {
             userNameLabel.text = userName + " " + userSurname
+            userPhoneLabel.text = phone
         } else {
             userNameLabel.text = nil
         }
@@ -64,7 +65,7 @@ extension UserTableViewCell {
 // MARK: -
 // MARK: - Configure
 
-fileprivate extension UserTableViewCell {
+fileprivate extension PhoneTableViewCell {
     
     private func configure() {
         configureCell()

@@ -23,13 +23,11 @@ class UsersTableScreenCoordinator {
     
     func openCreatingUserScreen() {
         let creatingUserScreen = Storyboard.createUser.viewController
-        //    (creatingUserScreen as! CurrentUserViewController)
         vc.navigationController?.pushViewController(creatingUserScreen, animated: true)
     }
     
     func showSelectedUserScreen(user: User) {
         let currentUserScreen = Storyboard.showSelectedUser.viewController
-//        vc.navigationController?.pushViewController(currentUserScreen, animated: true)
         if let sheet = currentUserScreen.sheetPresentationController {
             sheet.detents = [.medium(), .large()]
             sheet.prefersGrabberVisible = true
@@ -37,6 +35,11 @@ class UsersTableScreenCoordinator {
         }
         (currentUserScreen as? CurrentUserViewController)?.set(user: user)
         vc.present(currentUserScreen, animated: true)
+    }
+    
+    func showPhonesScreen() {
+        let phonesScreen = Storyboard.phonesScreen.viewController
+        vc.navigationController?.pushViewController(phonesScreen, animated: true)
     }
     
 }
