@@ -43,15 +43,12 @@ fileprivate extension AppDelegate {
     }
     
     private func configureRootViewController() {
-        let vc = UINavigationController(rootViewController: Storyboard.users.viewController as! UsersTableViewController)
-//        let vc = Storyboard.users.viewController as! UsersTableViewController
-        self.window?.rootViewController = vc
-        self.rootNavigationController = vc
+        let usersVC=Storyboard.users.viewController as! UsersTableViewController
+        let nc = UINavigationController(rootViewController: usersVC)
+        self.window?.rootViewController = nc
+        self.rootNavigationController = nc
         self.window?.makeKeyAndVisible()
         window?.makeKeyAndVisible()
     }
     
-
-//    let vc = UIStoryboard(name: "UsersTable", bundle: nil).instantiateViewController(withIdentifier: String(describing: UsersTableViewController.self)) as! UsersTableViewController
-//    self.window?.rootViewController = vc
 }

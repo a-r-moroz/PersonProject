@@ -16,19 +16,24 @@ class UsersTableScreenLayoutManager: NSObject {
     init(viewController: UsersTableViewController) {
         self.vc = viewController
         super.init()
+        configure()
     }
     
 }
 
 // MARK: -
-// MARK: - Update UI
+// MARK: - Configure
 
-extension UsersTableScreenLayoutManager {
-
-    func updateUI() {
+fileprivate extension UsersTableScreenLayoutManager {
+    
+    func configure() {
+        configureNavigationController()
+    }
+    
+    func configureNavigationController() {
         vc.title = "Список пользователей"
         vc.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Назад", style: .plain, target: nil, action: nil)
         vc.navigationController?.navigationBar.tintColor = AppColor.orangeColor
     }
-
+    
 }

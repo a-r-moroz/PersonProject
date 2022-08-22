@@ -17,6 +17,7 @@
 		8E5CF50E28AC55B6000BB6EA /* CurrentUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E5CF50D28AC55B6000BB6EA /* CurrentUser.storyboard */; };
 		8E64A4A128AC15C800552302 /* StoryboardEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64A4A028AC15C800552302 /* StoryboardEnum.swift */; };
 		8E64A4A428AC169700552302 /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64A4A328AC169700552302 /* UIStoryboardExtension.swift */; };
+		8E96F73728B2901F003220F6 /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E96F73628B2901F003220F6 /* CollectionExtension.swift */; };
 		8EB14A8F28AC027000773A84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB14A8E28AC027000773A84 /* AppDelegate.swift */; };
 		8EB14A9828AC027100773A84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EB14A9728AC027100773A84 /* Assets.xcassets */; };
 		8EB14A9B28AC027100773A84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EB14A9928AC027100773A84 /* LaunchScreen.storyboard */; };
@@ -58,6 +59,7 @@
 		8E5CF50D28AC55B6000BB6EA /* CurrentUser.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CurrentUser.storyboard; sourceTree = "<group>"; };
 		8E64A4A028AC15C800552302 /* StoryboardEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardEnum.swift; sourceTree = "<group>"; };
 		8E64A4A328AC169700552302 /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
+		8E96F73628B2901F003220F6 /* CollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtension.swift; sourceTree = "<group>"; };
 		8EB14A8B28AC027000773A84 /* Person.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Person.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EB14A8E28AC027000773A84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EB14A9728AC027100773A84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 			children = (
 				8E64A4A328AC169700552302 /* UIStoryboardExtension.swift */,
 				8E5CF4FA28AC4FBF000BB6EA /* UIViewControllerExtension.swift */,
+				8E96F73628B2901F003220F6 /* CollectionExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -657,6 +660,7 @@
 				8EF54AA828ACDBF4007914CF /* UsersTableViewCellDataSource.swift in Sources */,
 				8EF54ABF28AD17B8007914CF /* UsersTableScreenDelegate.swift in Sources */,
 				8EF54ABB28AD16E1007914CF /* UsersTableScreenDataSource.swift in Sources */,
+				8E96F73728B2901F003220F6 /* CollectionExtension.swift in Sources */,
 				8E5CF4FE28AC5057000BB6EA /* PersonRealmManager.swift in Sources */,
 				8EF54AAB28ACDDC3007914CF /* UserCellDelegate.swift in Sources */,
 				8EB14AAA28AC084000773A84 /* CreatePersonViewController.swift in Sources */,

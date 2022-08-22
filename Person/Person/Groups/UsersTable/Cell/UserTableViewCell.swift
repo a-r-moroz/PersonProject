@@ -18,6 +18,7 @@ class UserTableViewCell: UITableViewCell {
     
     // - Data
     private var model: User?
+    private(set) var cellType = "user"
     
     // - Lifecycle
     override func awakeFromNib() {
@@ -28,14 +29,6 @@ class UserTableViewCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         model = nil
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
     }
     
 }
@@ -52,10 +45,9 @@ extension UserTableViewCell {
     }
 
     private func setUserNameLabel() {
+        userNameLabel.text = nil
         if let userName = model?.name, let userSurname = model?.surname {
             userNameLabel.text = userName + " " + userSurname
-        } else {
-            userNameLabel.text = nil
         }
     }
     
@@ -67,10 +59,10 @@ extension UserTableViewCell {
 fileprivate extension UserTableViewCell {
     
     private func configure() {
-        configureCell()
+        configureSelectionStyle()
     }
     
-    private func configureCell() {
+    private func configureSelectionStyle() {
         self.selectionStyle = .none
     }
     

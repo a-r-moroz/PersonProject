@@ -23,7 +23,6 @@ class CreatePersonViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
-        layout.updateUI()
     }
     
 }
@@ -39,14 +38,18 @@ fileprivate extension CreatePersonViewController {
               let phone = phoneField.text,
               let city = cityField.text else { return }
         let newUser = User(name: name, surname: surname, phone: phone, city: city)
-        saveNewUser(newUser: newUser)
+        PersonRealmManager.add(object: newUser)
+        coordinator.popViewController()
     }
     
     @IBAction private func didTapCancelButton(_ sender: UIButton) {
-        coordinator.closeCreatingUserScreen()
+        coordinator.popViewController()
     }
     
 }
+
+// MARK: -
+// MARK: - Configure
 
 fileprivate extension CreatePersonViewController {
     
@@ -61,15 +64,6 @@ fileprivate extension CreatePersonViewController {
     
     private func configureLayoutManager() {
         layout = CreatePersonScreenLayoutManager(viewController: self)
-    }
-    
-}
-
-extension CreatePersonViewController: CreatePersonScreenDelegate {
-    
-    func saveNewUser(newUser: User) {
-        PersonRealmManager.add(object: newUser)
-        coordinator.closeCreatingUserScreen()
     }
     
 }

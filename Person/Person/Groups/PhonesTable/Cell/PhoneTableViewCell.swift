@@ -30,14 +30,6 @@ class PhoneTableViewCell: UITableViewCell {
         model = nil
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
 }
 
 // MARK: -
@@ -52,11 +44,11 @@ extension PhoneTableViewCell {
     }
 
     private func setUserNamAndPhone() {
+        userNameLabel.text = nil
+        userPhoneLabel.text = nil
         if let userName = model?.name, let userSurname = model?.surname, let phone = model?.phone {
             userNameLabel.text = userName + " " + userSurname
             userPhoneLabel.text = phone
-        } else {
-            userNameLabel.text = nil
         }
     }
     
@@ -68,10 +60,10 @@ extension PhoneTableViewCell {
 fileprivate extension PhoneTableViewCell {
     
     private func configure() {
-        configureCell()
+        configureSelectionStyle()
     }
     
-    private func configureCell() {
+    private func configureSelectionStyle() {
         self.selectionStyle = .none
     }
     

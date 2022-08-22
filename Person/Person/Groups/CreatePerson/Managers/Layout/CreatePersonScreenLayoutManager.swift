@@ -16,17 +16,23 @@ class CreatePersonScreenLayoutManager: NSObject {
     init(viewController: CreatePersonViewController) {
         self.vc = viewController
         super.init()
+        configure()
     }
     
 }
 
 // MARK: -
-// MARK: - Update UI
+// MARK: - Configure
 
-extension CreatePersonScreenLayoutManager {
-
-    func updateUI() {
-        vc.title = "Создать пользователя"
+fileprivate extension CreatePersonScreenLayoutManager {
+    
+    func configure() {
+        configureNavigationController()
     }
+    
+    func configureNavigationController() {
+        vc.title = "Создать пользователя"
 
+    }
+    
 }

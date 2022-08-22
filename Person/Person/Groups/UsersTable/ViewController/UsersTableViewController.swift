@@ -15,12 +15,12 @@ class UsersTableViewController: UIViewController {
     // - DataSource
     private var dataSource: UsersTableScreenDataSource!
 
-    // - Data
-    private var users: [User] = []
-
     // - Managers
     private var coordinator: UsersTableScreenCoordinator!
     private var layout: UsersTableScreenLayoutManager!
+    
+    // - Data
+    private var users: [User] = []
     
     // - Lifecycle
     override func viewDidLoad() {
@@ -51,6 +51,18 @@ fileprivate extension UsersTableViewController {
 }
 
 // MARK: -
+// MARK: - DB Request
+
+fileprivate extension UsersTableViewController {
+    
+    private func getUsers() {
+        users = PersonRealmManager.read(type: User.self)
+        dataSource.update(models: users)
+    }
+    
+}
+
+// MARK: -
 // MARK: - Delegate
 
 extension UsersTableViewController: UsersTableScreenDelegate {
@@ -61,12 +73,16 @@ extension UsersTableViewController: UsersTableScreenDelegate {
     
 }
 
+// MARK: -
+// MARK: - Configure
+
 fileprivate extension UsersTableViewController {
     
     private func configure() {
         configureDataSource()
         configureCoordinator()
         configureLayoutManager()
+        configureBarButtonItem()
     }
     
     private func configureDataSource() {
@@ -79,17 +95,11 @@ fileprivate extension UsersTableViewController {
     
     private func configureLayoutManager() {
         layout = UsersTableScreenLayoutManager(viewController: self)
-        layout.updateUI()
     }
     
     private func configureBarButtonItem() {
         let phonesButton = UIBarButtonItem(image: UIImage(systemName: "phone.fill"), style: .plain, target: self, action: #selector(showPhonesButton(sender:)))
             navigationItem.rightBarButtonItem = phonesButton
-    }
-    
-    private func getUsers() {
-        users = PersonRealmManager.read(type: User.self)
-        dataSource.update(models: users)
     }
     
 }

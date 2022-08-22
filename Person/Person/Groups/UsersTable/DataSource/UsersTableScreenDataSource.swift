@@ -33,7 +33,7 @@ final class UsersTableScreenDataSource: NSObject {
 // MARK: - Update
 
 extension UsersTableScreenDataSource {
-
+    
     func update(models: [User]) {
         self.models = models
         configureCells()
@@ -66,11 +66,32 @@ extension UsersTableScreenDataSource: UITableViewDataSource {
 
 extension UsersTableScreenDataSource: UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if models.indices.contains(indexPath.item) {
-            delegate?.didSelectOrderedItemCell(userModel: models[indexPath.item])
-        }
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let cell = tableView.cellForRow(at: indexPath)
+//        if let cell = cell as? UserTableViewCell, cell.cellType == "user" {
+//                if let userModel = models[safe: indexPath.item] {
+//                    delegate?.didSelectOrderedItemCell(userModel: userModel)
+//                }
+//            }
+        
+//            if let userModel = models[safe: indexPath.item] {
+//                delegate?.didSelectOrderedItemCell(userModel: userModel)
+//            }
+
+        
+//        if models.indices.contains(indexPath.item) {
+//            delegate?.didSelectOrderedItemCell(userModel: models[safe: indexPath.item] ?? User(name: "", surname: "", phone: "", city: ""))
+//        }
+//    }
+    
+//    if let cell = tableView.cellForRow(at: indexPath) as? FeedbackTableViewCell {
+//        switch cell.sectionType {
+//            case .email:
+//                delegate?.openRequestScreen()
+//        }
+//    } else if (tableView.cellForRow(at: indexPath) as? PhoneNumberTableViewCell) != nil {
+//        delegate?.callNumber()
+//    }
     
 }
 
@@ -80,13 +101,11 @@ extension UsersTableScreenDataSource: UITableViewDelegate {
 fileprivate extension UsersTableScreenDataSource {
     
     private enum Cell {
-//        private enum Cell: String {
-//        case personCell = "userTableViewCell"
         case personCell(user: User)
         var id: String {
             switch self {
-                case .personCell:
-                    return "userTableViewCell"
+            case .personCell:
+                return "userTableViewCell"
             }
         }
     }
@@ -99,7 +118,6 @@ fileprivate extension UsersTableScreenDataSource {
 fileprivate extension UsersTableScreenDataSource {
     
     private func configure() {
-        registerCells()
         configureTableView()
         configureCells()
     }
@@ -111,15 +129,10 @@ fileprivate extension UsersTableScreenDataSource {
         }
         tableView.reloadData()
     }
-
+    
     private func configureTableView() {
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.delaysContentTouches = false
-    }
-    
-    private func registerCells() {
-        tableView.register(UINib(nibName: String(describing: UserTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: UserTableViewCell.self))
     }
     
 }

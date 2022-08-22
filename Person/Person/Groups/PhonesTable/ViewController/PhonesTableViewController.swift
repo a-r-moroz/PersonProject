@@ -15,12 +15,12 @@ class PhonesTableViewController: UIViewController {
     // - DataSource
     private var dataSource: PhonesTableScreenDataSource!
 
-    // - Data
-    private var users: [User] = []
-
     // - Managers
     private var coordinator: PhonesTableScreenCoordinator!
     private var layout: PhonesTableScreenLayoutManager!
+    
+    // - Data
+    private var users: [User] = []
     
     // - Lifecycle
     override func viewDidLoad() {
@@ -36,6 +36,18 @@ class PhonesTableViewController: UIViewController {
 }
 
 // MARK: -
+// MARK: - DB Request
+
+fileprivate extension PhonesTableViewController {
+    
+    private func getUsers() {
+        users = PersonRealmManager.read(type: User.self)
+        dataSource.updateM(models: users)
+    }
+    
+}
+
+// MARK: -
 // MARK: - Delegate
     
 extension PhonesTableViewController: PhonesTableScreenDelegate {
@@ -45,6 +57,9 @@ extension PhonesTableViewController: PhonesTableScreenDelegate {
     }
     
 }
+
+// MARK: -
+// MARK: - Configure
 
 fileprivate extension PhonesTableViewController {
     
@@ -59,11 +74,6 @@ fileprivate extension PhonesTableViewController {
     
     private func configureCoordinator() {
         coordinator = PhonesTableScreenCoordinator(viewController: self)
-    }
-    
-    private func getUsers() {
-        users = PersonRealmManager.read(type: User.self)
-        dataSource.updateM(models: users)
     }
     
 }

@@ -5,7 +5,6 @@
 //  Created by Andrew Moroz on 17.08.22.
 //
 
-import Foundation
 import UIKit
 class CurrentUserViewController: UIViewController {
     

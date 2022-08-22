@@ -17,7 +17,7 @@ class UsersTableScreenCoordinator {
         self.vc = viewController
     }
     
-    func closeCreatingUserScreen() {
+    func popViewController() {
         vc.navigationController?.popViewController(animated: true)
     }
     

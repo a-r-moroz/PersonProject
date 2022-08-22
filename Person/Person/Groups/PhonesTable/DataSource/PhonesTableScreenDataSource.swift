@@ -68,7 +68,7 @@ extension PhonesTableScreenDataSource: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if models.indices.contains(indexPath.item) {
-            delegate?.showUserBySelectedPhone(user: models[indexPath.item])
+            delegate?.showUserBySelectedPhone(user: models[safe: indexPath.item] ?? User(name: "", surname: "", phone: "", city: ""))
         }
     }
     
@@ -97,7 +97,6 @@ fileprivate extension PhonesTableScreenDataSource {
 fileprivate extension PhonesTableScreenDataSource {
     
     private func configure() {
-        registerCells()
         configureTableView()
         configureCells()
     }
@@ -113,11 +112,6 @@ fileprivate extension PhonesTableScreenDataSource {
     private func configureTableView() {
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.delaysContentTouches = false
-    }
-    
-    private func registerCells() {
-        tableView.register(UINib(nibName: String(describing: PhoneTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: PhoneTableViewCell.self))
     }
     
 }
