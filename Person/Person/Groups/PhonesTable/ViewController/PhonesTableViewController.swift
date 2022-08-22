@@ -17,7 +17,6 @@ class PhonesTableViewController: UIViewController {
 
     // - Managers
     private var coordinator: PhonesTableScreenCoordinator!
-    private var layout: PhonesTableScreenLayoutManager!
     
     // - Data
     private var users: [User] = []
@@ -42,7 +41,7 @@ fileprivate extension PhonesTableViewController {
     
     private func getUsers() {
         users = PersonRealmManager.read(type: User.self)
-        dataSource.updateM(models: users)
+        dataSource.update(with: users)
     }
     
 }

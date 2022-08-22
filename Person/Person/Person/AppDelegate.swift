@@ -43,7 +43,7 @@ fileprivate extension AppDelegate {
     }
     
     private func configureRootViewController() {
-        let usersVC=Storyboard.users.viewController as! UsersTableViewController
+        let usersVC = Storyboard.users.viewController as! UsersTableViewController
         let nc = UINavigationController(rootViewController: usersVC)
         self.window?.rootViewController = nc
         self.rootNavigationController = nc

@@ -8,6 +8,5 @@
 import Foundation
 
 protocol PhonesTableScreenDelegate: AnyObject {
-    
     func showUserBySelectedPhone(user: User)
 }

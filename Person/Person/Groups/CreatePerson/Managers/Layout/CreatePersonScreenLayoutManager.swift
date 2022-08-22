@@ -26,13 +26,12 @@ class CreatePersonScreenLayoutManager: NSObject {
 
 fileprivate extension CreatePersonScreenLayoutManager {
     
-    func configure() {
+    private func configure() {
         configureNavigationController()
     }
     
-    func configureNavigationController() {
+    private func configureNavigationController() {
         vc.title = "Создать пользователя"
-        
     }
     
 }

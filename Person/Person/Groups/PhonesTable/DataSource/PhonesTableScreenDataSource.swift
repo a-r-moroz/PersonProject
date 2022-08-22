@@ -34,7 +34,7 @@ class PhonesTableScreenDataSource: NSObject {
 
 extension PhonesTableScreenDataSource {
     
-    func updateM(models: [User]) {
+    func update(with models: [User]) {
         self.models = models
         configureCells()
     }
@@ -68,10 +68,8 @@ extension PhonesTableScreenDataSource: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
-        if let cell =  cell as? PhoneTableViewCell {
-            if let userModel = cell.model {
-                delegate?.showUserBySelectedPhone(user: userModel)
-            }
+        if let cell =  cell as? PhoneTableViewCell, let userModel = cell.model {
+            delegate?.showUserBySelectedPhone(user: userModel)
         }
     }
     
@@ -86,7 +84,7 @@ fileprivate extension PhonesTableScreenDataSource {
         case phoneCell(user: User)
         var id: String {
             switch self {
-            case .phoneCell:
+                case .phoneCell:
                 return "phoneTableViewCell"
             }
         }

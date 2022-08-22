@@ -17,7 +17,7 @@ class CreatePersonViewController: UIViewController {
     
     // - Managers
     private var coordinator: CreatePersonScreenCoordinator!
-    private var layout: CreatePersonScreenLayoutManager!
+    private var layoutManager: CreatePersonScreenLayoutManager!
     
     // - Lifecycle
     override func viewDidLoad() {
@@ -63,7 +63,7 @@ fileprivate extension CreatePersonViewController {
     }
     
     private func configureLayoutManager() {
-        layout = CreatePersonScreenLayoutManager(viewController: self)
+        layoutManager = CreatePersonScreenLayoutManager(viewController: self)
     }
     
 }

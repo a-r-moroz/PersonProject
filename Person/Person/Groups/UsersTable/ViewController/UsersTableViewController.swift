@@ -17,7 +17,7 @@ class UsersTableViewController: UIViewController {
     
     // - Managers
     private var coordinator: UsersTableScreenCoordinator!
-    private var layout: UsersTableScreenLayoutManager!
+    private var layoutManager: UsersTableScreenLayoutManager!
     
     // - Data
     private var users: [User] = []
@@ -94,7 +94,7 @@ fileprivate extension UsersTableViewController {
     }
     
     private func configureLayoutManager() {
-        layout = UsersTableScreenLayoutManager(viewController: self)
+        layoutManager = UsersTableScreenLayoutManager(viewController: self)
     }
     
     private func configureBarButtonItem() {

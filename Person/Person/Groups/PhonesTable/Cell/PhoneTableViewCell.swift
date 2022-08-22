@@ -25,11 +25,6 @@ class PhoneTableViewCell: UITableViewCell {
         configure()
     }
     
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        model = nil
-    }
-    
 }
 
 // MARK: -
@@ -47,7 +42,7 @@ extension PhoneTableViewCell {
         userNameLabel.text = nil
         userPhoneLabel.text = nil
         if let userName = model?.name, let userSurname = model?.surname, let phone = model?.phone {
-            userNameLabel.text = userName + " " + userSurname
+            userNameLabel.text = "\(userName) \(userSurname)"
             userPhoneLabel.text = phone
         }
     }

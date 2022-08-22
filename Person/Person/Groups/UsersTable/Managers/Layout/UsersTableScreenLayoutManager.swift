@@ -26,11 +26,11 @@ class UsersTableScreenLayoutManager: NSObject {
 
 fileprivate extension UsersTableScreenLayoutManager {
     
-    func configure() {
+    private func configure() {
         configureNavigationController()
     }
     
-    func configureNavigationController() {
+    private func configureNavigationController() {
         vc.title = "Список пользователей"
         vc.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Назад", style: .plain, target: nil, action: nil)
         vc.navigationController?.navigationBar.tintColor = AppColor.orangeColor

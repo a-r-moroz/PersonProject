@@ -86,7 +86,7 @@ fileprivate extension UsersTableScreenDataSource {
         case personCell(user: User)
         var id: String {
             switch self {
-            case .personCell:
+                case .personCell:
                 return "userTableViewCell"
             }
         }

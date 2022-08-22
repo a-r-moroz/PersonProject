@@ -25,11 +25,6 @@ class UserTableViewCell: UITableViewCell {
         configure()
     }
     
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        model = nil
-    }
-    
 }
 
 // MARK: -
@@ -46,7 +41,7 @@ extension UserTableViewCell {
     private func setUserNameLabel() {
         userNameLabel.text = nil
         if let userName = model?.name, let userSurname = model?.surname {
-            userNameLabel.text = userName + " " + userSurname
+            userNameLabel.text = "\(userName) \(userSurname)"
         }
     }
     
