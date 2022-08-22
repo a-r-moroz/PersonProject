@@ -66,32 +66,14 @@ extension UsersTableScreenDataSource: UITableViewDataSource {
 
 extension UsersTableScreenDataSource: UITableViewDelegate {
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let cell = tableView.cellForRow(at: indexPath)
-//        if let cell = cell as? UserTableViewCell, cell.cellType == "user" {
-//                if let userModel = models[safe: indexPath.item] {
-//                    delegate?.didSelectOrderedItemCell(userModel: userModel)
-//                }
-//            }
-        
-//            if let userModel = models[safe: indexPath.item] {
-//                delegate?.didSelectOrderedItemCell(userModel: userModel)
-//            }
-
-        
-//        if models.indices.contains(indexPath.item) {
-//            delegate?.didSelectOrderedItemCell(userModel: models[safe: indexPath.item] ?? User(name: "", surname: "", phone: "", city: ""))
-//        }
-//    }
-    
-//    if let cell = tableView.cellForRow(at: indexPath) as? FeedbackTableViewCell {
-//        switch cell.sectionType {
-//            case .email:
-//                delegate?.openRequestScreen()
-//        }
-//    } else if (tableView.cellForRow(at: indexPath) as? PhoneNumberTableViewCell) != nil {
-//        delegate?.callNumber()
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        if let cell = cell as? UserTableViewCell {
+            if let userModel = cell.model {
+                delegate?.didSelectOrderedItemCell(userModel: userModel)
+            }
+        }
+    }
     
 }
 

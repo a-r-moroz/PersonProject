@@ -8,6 +8,7 @@
 import RealmSwift
 
 class User: Object {
+    
     @objc dynamic var name: String = ""
     @objc dynamic var phone: String = ""
     @objc dynamic var surname: String = ""
@@ -20,8 +21,5 @@ class User: Object {
         self.phone = phone
         self.city = city
     }
+    
 }
-
-//class User {
-//@objc dynamic
-//@Persisted

@@ -32,7 +32,7 @@ fileprivate extension CreatePersonScreenLayoutManager {
     
     func configureNavigationController() {
         vc.title = "Создать пользователя"
-
+        
     }
     
 }

@@ -41,7 +41,6 @@
 		8EF54ADB28AEEC4B007914CF /* PhonesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF54ADA28AEEC4B007914CF /* PhonesTableViewController.swift */; };
 		8EF54ADD28AEECFD007914CF /* PhonesTableScreenDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF54ADC28AEECFD007914CF /* PhonesTableScreenDataSource.swift */; };
 		8EF54ADF28AEEDA5007914CF /* PhonesTableScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF54ADE28AEEDA5007914CF /* PhonesTableScreenCoordinator.swift */; };
-		8EF54AE128AEEDE1007914CF /* PhonesTableScreenLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF54AE028AEEDE1007914CF /* PhonesTableScreenLayoutManager.swift */; };
 		8EF54AE328AEEE5B007914CF /* PhoneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF54AE228AEEE5B007914CF /* PhoneTableViewCell.swift */; };
 		8EF54AE528AFC301007914CF /* PhonesTableScreenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF54AE428AFC301007914CF /* PhonesTableScreenDelegate.swift */; };
 		AD2839B78F1784167FCA9219 /* Pods_Person.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA8CF2CA2479CB3823B60110 /* Pods_Person.framework */; };
@@ -85,7 +84,6 @@
 		8EF54ADA28AEEC4B007914CF /* PhonesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhonesTableViewController.swift; sourceTree = "<group>"; };
 		8EF54ADC28AEECFD007914CF /* PhonesTableScreenDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhonesTableScreenDataSource.swift; sourceTree = "<group>"; };
 		8EF54ADE28AEEDA5007914CF /* PhonesTableScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhonesTableScreenCoordinator.swift; sourceTree = "<group>"; };
-		8EF54AE028AEEDE1007914CF /* PhonesTableScreenLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhonesTableScreenLayoutManager.swift; sourceTree = "<group>"; };
 		8EF54AE228AEEE5B007914CF /* PhoneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTableViewCell.swift; sourceTree = "<group>"; };
 		8EF54AE428AFC301007914CF /* PhonesTableScreenDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhonesTableScreenDelegate.swift; sourceTree = "<group>"; };
 		BA8CF2CA2479CB3823B60110 /* Pods_Person.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Person.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -498,17 +496,8 @@
 			isa = PBXGroup;
 			children = (
 				8EF54AD728AEE8A0007914CF /* Coordinator */,
-				8EF54AD628AEE89D007914CF /* Layout */,
 			);
 			path = Managers;
-			sourceTree = "<group>";
-		};
-		8EF54AD628AEE89D007914CF /* Layout */ = {
-			isa = PBXGroup;
-			children = (
-				8EF54AE028AEEDE1007914CF /* PhonesTableScreenLayoutManager.swift */,
-			);
-			path = Layout;
 			sourceTree = "<group>";
 		};
 		8EF54AD728AEE8A0007914CF /* Coordinator */ = {
@@ -682,7 +671,6 @@
 				8E5CF50128AC5127000BB6EA /* User.swift in Sources */,
 				8EF54AB828AD0B6F007914CF /* CurrentUserScreenCoordinator.swift in Sources */,
 				8EF54ADB28AEEC4B007914CF /* PhonesTableViewController.swift in Sources */,
-				8EF54AE128AEEDE1007914CF /* PhonesTableScreenLayoutManager.swift in Sources */,
 				8E5CF4F728AC4BAF000BB6EA /* AppColor.swift in Sources */,
 				8EF54AC628AD77BE007914CF /* UsersTableScreenLayoutManager.swift in Sources */,
 			);

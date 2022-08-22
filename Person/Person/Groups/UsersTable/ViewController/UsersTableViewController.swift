@@ -8,13 +8,13 @@
 import UIKit
 
 class UsersTableViewController: UIViewController {
-        
+    
     // - UI
     @IBOutlet weak var tableView: UITableView!
     
     // - DataSource
     private var dataSource: UsersTableScreenDataSource!
-
+    
     // - Managers
     private var coordinator: UsersTableScreenCoordinator!
     private var layout: UsersTableScreenLayoutManager!
@@ -27,7 +27,7 @@ class UsersTableViewController: UIViewController {
         super.viewDidLoad()
         configure()
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getUsers()
@@ -39,7 +39,7 @@ class UsersTableViewController: UIViewController {
 // MARK: - Action
 
 fileprivate extension UsersTableViewController {
-
+    
     @IBAction func createUser(_ sender: UIButton) {
         coordinator.openCreatingUserScreen()
     }
@@ -99,7 +99,7 @@ fileprivate extension UsersTableViewController {
     
     private func configureBarButtonItem() {
         let phonesButton = UIBarButtonItem(image: UIImage(systemName: "phone.fill"), style: .plain, target: self, action: #selector(showPhonesButton(sender:)))
-            navigationItem.rightBarButtonItem = phonesButton
+        navigationItem.rightBarButtonItem = phonesButton
     }
     
 }

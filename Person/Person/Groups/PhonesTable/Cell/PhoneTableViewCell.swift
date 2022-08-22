@@ -16,8 +16,8 @@ class PhoneTableViewCell: UITableViewCell {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userPhoneLabel: UILabel!
     
-    // - DataSource
-    private var model: User?
+    // - Data
+    private(set) var model: User?
     
     // - Lifecycle
     override func awakeFromNib() {

@@ -18,7 +18,7 @@ class CreatePersonViewController: UIViewController {
     // - Managers
     private var coordinator: CreatePersonScreenCoordinator!
     private var layout: CreatePersonScreenLayoutManager!
-
+    
     // - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()

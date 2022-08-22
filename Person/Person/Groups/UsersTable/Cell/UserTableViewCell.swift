@@ -17,8 +17,7 @@ class UserTableViewCell: UITableViewCell {
     @IBOutlet weak var userImageView: UIImageView!
     
     // - Data
-    private var model: User?
-    private(set) var cellType = "user"
+    private(set) var model: User?
     
     // - Lifecycle
     override func awakeFromNib() {

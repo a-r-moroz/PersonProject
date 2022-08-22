@@ -27,5 +27,5 @@ class PhonesTableScreenCoordinator {
         (currentUserScreen as? CurrentUserViewController)?.set(user: user)
         vc.present(currentUserScreen, animated: true)
     }
-
+    
 }

@@ -67,8 +67,11 @@ extension PhonesTableScreenDataSource: UITableViewDataSource {
 extension PhonesTableScreenDataSource: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if models.indices.contains(indexPath.item) {
-            delegate?.showUserBySelectedPhone(user: models[safe: indexPath.item] ?? User(name: "", surname: "", phone: "", city: ""))
+        let cell = tableView.cellForRow(at: indexPath)
+        if let cell =  cell as? PhoneTableViewCell {
+            if let userModel = cell.model {
+                delegate?.showUserBySelectedPhone(user: userModel)
+            }
         }
     }
     
